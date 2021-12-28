@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Poppins:wght@200;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.nav{
+    list-style-type: none;
+    /* background-color: rgb(33, 48, 77); */
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    margin: 20px 12%;
+    
+    
+}
+
+li{
+    /* background-color: beige; */
+    display: inline-block;
+    height: 30px;
+    float: left;
+    
+}
+
+.nav-a{
+    text-decoration: none;
+    /* background-color: aqua; */
+    display: block;
+    padding: 10px 35px;
+    line-height: 50px;
+    color: black;
+    transition: background-color 0.8s;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+
+}
+
+.nav-a:hover{
+    background-color:rgb(224, 168, 26);
+    
+}
+
+
+.navigation-bar{
+    /* background-color: burlywood; */
+    height: 100px;
+    font-size: 16px;
+    
+}
+
+.logo{
+    /* background-color: coral; */
+    display: inline-block;
+    height: 100px;
+    width:300px;
+}
+#logo{
+    text-align: center;
+    /* background-color: rgb(206, 206, 54); */
+    font-size: 20px;
+    color: rgb(224, 168, 26);
+    font-weight: bold;
+    height: 30px;
+    text-decoration: none;
+    display: block;
+    margin-top: 13%;
+    letter-spacing: 0.5px;
+    transition: color 0.7s;
+}
+
+#logo:hover{
+    color: rgb(126, 123, 123);
+}
