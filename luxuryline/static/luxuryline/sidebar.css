@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Poppins:wght@200;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.div1{
+    background-color: rgb(100, 100, 224);
+    
+    height: 900px;
+    width: 320px;
+    margin-bottom: 2px;
+    display: inline-block;
+}
+
+.div2{
+    /* background-color: rgb(100, 100, 224); */
+    height: 720px;
+    
+}
+
+.sidebar-logo{
+    background-color: rgb(24, 24, 112);
+    background-image: url("../luxuryline/logo-hrm.jpg");
+    background-size: contain;
+
+    display: inline-block;
+    height: 50px;
+    width: 80px;
+    padding: 10px 5px;
+    margin: 15px 10px;
+    color: white;
+    border-radius: 100px;
+}
+
+.sidebar-h2{
+    /* background-color: blueviolet; */
+    display: inline-block;
+    position: absolute;
+    margin: 30px -5px;
+    color: white;
+    
+    
+    
+}
+.sidebar-h3{
+    /* background-color: burlywood; */
+    height: 20px;
+    width: 230px;
+    padding: 15px 15px;
+    text-align: center;
+    margin: 5px 10px;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-ul{
+    list-style: none;
+    /* background-color: cadetblue; */
+    margin: 20px 10px;
+    
+}
+
+.sidebar-li{
+    /* background-color: cornflowerblue; */
+    padding: 20px 0px;
+    
+}
+
+.sidebar-a{
+    text-decoration: none;
+    background-color: white;
+    display: inline-block;
+    width: 60%;
+    height: 22px;
+    padding: 20px 30px;
+    margin-left: 10px;
+    text-align: left;
+    letter-spacing: 0.7px;
+    text-transform: capitalize;
+    color: rgb(50, 33, 156);
+    border-radius: 8px;
+    transition: color 0.5s, background-color 0.5s, border-radius 0.6s;
+}
+
+.sidebar-a:hover{
+    color: white;
+    background-color: rgb(50, 33, 156);
+    border-radius: 30px;
+}
+

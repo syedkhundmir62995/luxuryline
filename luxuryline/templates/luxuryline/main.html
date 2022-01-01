@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- include all css files in main.html -->
     {% load static %}
+    <link rel="stylesheet" href="{% static 'luxuryline/home.css' %}">
     <link rel="stylesheet" href="{% static 'loginapp/login.css' %}">
     <link rel="stylesheet" href="{% static 'signupapp/signup.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboardapp/dashboard.css' %}">
+    <style>
+       
+        .div3{
+            background-image: url("{% static 'luxuryline/campaign-creators.jpg'  %}");
+        }
+    </style>
     <title>Luxury Line World</title>
 </head>
 <body>
-    {% include 'luxuryline/navigationbar.html' %}
+    {% include 'luxuryline/messages.html' %}
+    {% include 'luxuryline/sidebar.html' %}
 
     {% block content %}
 

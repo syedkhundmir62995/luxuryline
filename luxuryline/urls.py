@@ -27,6 +27,8 @@ urlpatterns = [
     path('',views.home,name='homepage'),
     path('signup/',include('signupapp.urls')),
     path('login/',include('loginapp.urls')),
+    # path('login/',include('loginapp.urls')),
+
     path('dashboard/',include('dashboardapp.urls')),
 
 ]

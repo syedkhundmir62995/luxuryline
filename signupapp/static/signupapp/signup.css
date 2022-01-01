@@ -12,11 +12,13 @@ body{
     /* background-color: aqua; */
     height: 605px;
     width: 40%;
-    margin-top: 4%;
-    margin-left: 30%;
+    margin-top: 5%;
+    margin-left: 10%;
     margin-bottom: 5%;
-    box-shadow: 0px 0px 4px 1px rgb(167, 163, 163);
+    box-shadow: 0px 0px 4px 1px rgb(167 163 163);
     border-radius: 10px;
+    display: inline-block;
+    position: absolute;
 }
 
 #signup-h2{
