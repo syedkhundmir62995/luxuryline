@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
+from django.contrib import messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'dashboardapp.apps.DashboardappConfig',
     'loginapp.apps.LoginappConfig',
     'signupapp.apps.SignupappConfig',
+    'suppliers.apps.SuppliersConfig',
 ]
 
 MIDDLEWARE = [
@@ -62,6 +64,7 @@ TEMPLATES = [
             os.path.join(BASE_DIR,'loginapp/templates'),
             os.path.join(BASE_DIR,'signupapp/templates'),
             os.path.join(BASE_DIR,'dashboardapp/templates'),
+            os.path.join(BASE_DIR,'suppliers/templates'),
 
         ],
         'APP_DIRS': True,
@@ -147,4 +150,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'loginapp/static'),
     os.path.join(BASE_DIR,'signupapp/static'),
     os.path.join(BASE_DIR,'dashboardapp/static'),
+    os.path.join(BASE_DIR,'suppliers/static'),
 ]
+
+MESSAGE_TAGS = {
+        messages.ERROR : "danger",
+}

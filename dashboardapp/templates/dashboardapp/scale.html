@@ -1,0 +1,24 @@
+{% extends 'luxuryline/main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale</title>
+</head>
+<body>
+    {% block content %}
+    <h2 style="display: inline-block; position: absolute; padding: 35px 20px; text-transform: uppercase;">Add Scale</h2>
+    <div class="scale-container">
+        <form action="{% url 'scalepage' %}" method="post">
+            {% csrf_token %}
+        <div class="scale-input"><input type="text" required placeholder="Enter a New Scale" name="newscale"></div>
+        <input type="submit" value="Add New Scale"  class="scale-submit">
+    </form>
+    </div>
+
+    {% endblock content %}
+    
+</body>
+</html>

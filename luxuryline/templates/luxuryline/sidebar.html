@@ -12,23 +12,24 @@
     <div class="div1">
         <div class="div2">
             <div class="sidebar-logo">Logo</div>
-            <h2 class = "sidebar-h2">Luxury Line World</h2>
+            <h3 class = "sidebar-h2">Luxury Line World</h3>
             {% if user.is_authenticated %}
-            <h3 class = "sidebar-h3">Welcome, {{user.last_name}} </h3>
+            <h4 class = "sidebar-h3">Welcome, {{user.last_name}} </h4>
             {% endif %}
             <ul class = 'sidebar-ul'>
                 <li class="sidebar-li"><a href="{% url 'homepage' %}" class="sidebar-a">Home</a></li>
                 {% if user.is_authenticated %}
                 <li class="sidebar-li"><a href="{% url 'dashboardpage' %}" class="sidebar-a">Dashboard</a></li>
                 <li class="sidebar-li"><a href="{% url 'dashboardpage' %}" class="sidebar-a">Profile</a></li>
-                <li class="sidebar-li"><a href="{% url 'dashboardpage' %}" class="sidebar-a">Change Password</a></li>
+                <li class="sidebar-li"><a href="{% url 'signuppage' %}" class="sidebar-a">Create New User</a></li>
+                
                 <li class="sidebar-li"><a href="{% url 'logoutpage' %}" class="sidebar-a">Logout</a></li>
                 {% else %}
-                <li class="sidebar-li"><a href="{% url 'signuppage' %}" class="sidebar-a">Sign Up</a></li>
+                <!-- <li class="sidebar-li"><a href="{% url 'signuppage' %}" class="sidebar-a">Create New User</a></li> -->
                 <li class="sidebar-li"><a href="{% url 'loginpage' %}" class="sidebar-a">Login</a></li>
                 {% endif %}
 
-                <li class="sidebar-li"><a href="{% url 'homepage' %}" class="sidebar-a">Contact</a></li>
+                
                 
             </ul>
         </div>

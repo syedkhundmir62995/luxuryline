@@ -12,11 +12,11 @@ def login(request):
 
         user = auth.authenticate(request, username = uname, password = passd)
         if user is None:
-            messages.info(request,"INVALID CREDENTIALS")
+            messages.error(request,"INVALID CREDENTIALS")
             return redirect('loginpage')
         else:
             auth.login(request,user)
-            messages.info(request,"LOGIN SUCCESSFUL")
+            messages.success(request,"LOGIN SUCCESSFUL")
             return redirect('dashboardpage')
     else:
         return render(request,'loginapp/login.html')

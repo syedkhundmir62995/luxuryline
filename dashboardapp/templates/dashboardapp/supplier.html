@@ -1,0 +1,41 @@
+{% extends 'luxuryline/main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier</title>
+</head>
+<body>
+    {% block content %}
+    <h2 style="display: inline-block; position: absolute;" class="supplier-h2">Supplier Page</h2>
+    <div class="supplier-container">
+        <form method="post">
+            {% csrf_token %}
+        <!-- <div class="sid-div">
+            <label for="sid">SID</label>
+            <input type="text" name="sid" id="sid">
+        </div> -->
+        <div class="suppliername-div">
+            <label for="id_suppliername">SUPPLIER NAME</label>
+            {{form.suppliername}}
+            <!-- <input type="text" name="suppliername" id="suppliername"> -->
+        </div>
+        <div class="supplieraddress-div">
+            <label for="id_supplieraddress">SUPPLIER ADDRESS</label>
+            {{form.supplieraddress}}
+            <!-- <input type="text" name="supplieraddress" id="supplieraddress"> -->
+        </div>
+        <div class="suppliervat-div">
+            <label for="id_vat">VAT</label>
+            {{form.vat}}
+            <!-- <input type="text" name="suppliername" id="suppliername"> -->
+        </div>
+
+        <input type="submit" value="Add Supplier" class="supplier-submit">
+    </form>
+    </div>
+    {% endblock content %}
+</body>
+</html>

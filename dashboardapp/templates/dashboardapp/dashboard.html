@@ -11,15 +11,48 @@
     
 
     {% block content %}
-    <h2 style="display: inline-block; position: absolute; padding: 15px 15px;">DASHBOARD</h2>
-    <div class="div5">
-        <ul>
-            <li><a href="#">SUPPLIERS</a></li>
-            <li><a href="#">EXPENSES</a></li>
-            <li><a href="#">EMPLOYEES</a></li>
-            <li><a href="#">MATERIALS</a></li>
-            <li><a href="#">PRODUCTS</a></li>
-        </ul>
+    <h2 style="display: inline-block; position: absolute; padding: 35px 20px; text-transform: uppercase;">Dashboard</h2>
+    <div class="dashboard-div1">
+        <div class="dashboard-card1">
+            <div class="dashboard-card1-img" style="background-image: url('../../static/dashboardapp/material.png');"></div>
+            <div class="dashboard-card1-h2"><h2>INVENTORY</h2></div>
+            <div class="dashboard-card1-btn"><a href="{% url 'viewmaterialpage' %}">View Material</a></div>
+            <!-- <div class="dashboard-card1-btn"><a href="{% url 'scalepage' %}">Add New Scale</a></div>  -->
+            <!-- <div class="dashboard-card1-btn"><a href="#">Material List</a></div>  -->
+        </div>
+        <div class="dashboard-card2">
+            <div class="dashboard-card2-img" style="background-image: url('../../static/dashboardapp/supplier.png');"></div>
+            <div class="dashboard-card2-h2"><h2>HUMAN RESOURCE</h2></div>
+            <div class="dashboard-card2-btn"><a href="#">Add New Supplier</a></div>
+            <div class="dashboard-card2-btn"><a href="#">Supplier List</a></div>
+        </div>
+        <div class="dashboard-card3">
+            <div class="dashboard-card2-img" style="background-image: url('../../static/dashboardapp/supplier.png');"></div>
+            <div class="dashboard-card2-h2"><h2>ACCOUNTS & FINANCE</h2></div>
+            <div class="dashboard-card2-btn"><a href="#">Add New Supplier</a></div>
+            <div class="dashboard-card2-btn"><a href="#">Supplier List</a></div>
+        </div>
+
+        <div class="dashboard-card4">
+            <div class="dashboard-card2-img" style="background-image: url('../../static/dashboardapp/supplier.png');"></div>
+            <div class="dashboard-card2-h2"><h2>SALES & PURCHASING</h2></div>
+            <div class="dashboard-card2-btn"><a href="#">Add New Supplier</a></div>
+            <div class="dashboard-card2-btn"><a href="#">Supplier List</a></div>
+        </div>
+
+        <div class="dashboard-card5">
+            <div class="dashboard-card2-img" style="background-image: url('../../static/dashboardapp/supplier.png');"></div>
+            <div class="dashboard-card2-h2"><h2>MARKETING</h2></div>
+            <div class="dashboard-card2-btn"><a href="#">Add New Supplier</a></div>
+            <div class="dashboard-card2-btn"><a href="#">Supplier List</a></div>
+        </div>
+
+        <div class="dashboard-card6">
+            <div class="dashboard-card2-img" style="background-image: url('../../static/dashboardapp/supplier.png');"></div>
+            <div class="dashboard-card2-h2"><h2>ORDER MANAGEMENT</h2></div>
+            <div class="dashboard-card2-btn"><a href="#">Profit</a></div>
+            <div class="dashboard-card2-btn"><a href="#">Supplier List</a></div>
+        </div>
     </div>
     {% endblock content %}
 </body>

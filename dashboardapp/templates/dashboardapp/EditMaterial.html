@@ -1,0 +1,84 @@
+{% include 'luxuryline/main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Material</title>
+  </head>
+  <body>
+    <h2 style="display: inline-block; position: absolute; padding: 35px 20px; text-transform: uppercase; font-family: Poppins;">Edit Material</h2>
+    <div class="form-material-edit">
+      <form method="post" action="{% url 'editmaterialpage' obj.uid %}">
+        {% csrf_token %}
+        <div class="material-container">
+        
+        <div class="Scale-div">
+            <label for="mid">MID</label>
+  
+            
+            <select id="mid" name = 'mid'>
+              
+              <option value="{{ obj.uid }}" >{{ obj.mid }}</option>
+             
+              
+
+            </select>
+          </div>
+
+        <div class="Material-div">
+          <label for="id_material">MATERIAL</label>
+          {{form.material}}
+        </div>
+        <div class="Quantity-div">
+          <label for="id_quantity">QUANTITY</label>
+          {{form.quantity}}
+        </div>
+        <div class="Scale-div">
+          <label for="scale">SCALE</label>
+
+          
+          <select id="scale" name = 'scale'>
+            {% for obj in data %}
+            <option value="{{ obj.scaleid }}" >{{ obj.scale }}</option>
+           
+            {% endfor %}
+           
+            
+          </select>
+        </div>
+
+        <div class="color-div">
+          <label for="id_color">COLOR</label>
+          {{form.color}}  
+        </div>
+
+        <div class="lastupdated-div">
+          <label for="id_lastupdated">DATE</label>
+          {{form.lastupdated}}
+        </div>
+
+        <div class="Supplier-div">
+          <label for="supplier">SUPPLIER</label>
+
+          
+          <select id="supplier" name = 'supplier'>
+            {% for obj in supplier_data %}
+            <option value="{{ obj.supplierid }}" >{{ obj.supplier_name }}</option>
+           
+            {% endfor %}
+           
+            
+          </select>
+        </div>
+
+        <!-- <div class="Submit-div"> -->
+          <input type="submit" value="Edit Material" class="Submit-div" />
+          <a class="redirect-div" href="{% url 'viewmaterialpage' %}" >Return to View Page</a>
+        <!-- </div> -->
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

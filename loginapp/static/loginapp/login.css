@@ -24,7 +24,7 @@ body{
 /* background-color: aquamarine; */
 display: inline-block;
 margin-top: 30px;
-margin-left: 200px;
+margin-left: 170px;
 padding: 5px 5px;
 letter-spacing: 0.6px;
 }
@@ -33,14 +33,14 @@ letter-spacing: 0.6px;
 /* background-color: beige; */
 display: inline-block;
 margin-top: 7px;
-margin-left: 120px;
+margin-left: 80px;
 color: darkgray;
 letter-spacing: 0.4px;
 }
 
 form{
 /* background-color: blueviolet; */
-margin-top: 25px;
+margin-top: 35px;
 
 }
 
@@ -51,7 +51,8 @@ margin-top: 25px;
 
 
 .login-input{
-    height: 30px;
+    height: 40px;
+    /* background-color: springgreen; */
     width: 380px;
     /* margin: 10px 10px; */
     margin-left: 100px;
@@ -77,6 +78,8 @@ margin-top: 25px;
     background-size: 7%;
     background-position-x: 5px;
     background-position-y: 5px;
+    
+
     letter-spacing: 0.6px;
     border: 1px solid black;
 }
@@ -93,9 +96,9 @@ margin-top: 25px;
 
 
 
-#submit-btn{
+#login-submit-btn{
     height: 40px;
-    width: 380px;
+    width: 335px;
     border-radius: 10px;
     margin-top: 20px;
     margin-left: 20%;
@@ -107,7 +110,7 @@ margin-top: 25px;
     transition: background-color 0.5s, color 1s, border-radius 1s, border 0.5s;
 }
 
-#submit-btn:hover{
+#login-submit-btn:hover{
     background-color: white;
     color: rgb(66, 66, 255);
     border-radius: 40px;

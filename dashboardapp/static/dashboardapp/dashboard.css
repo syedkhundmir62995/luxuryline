@@ -2,46 +2,189 @@
 *{
     margin: 0;
     padding: 0;
+}
+
+body{
     font-family: 'Poppins', sans-serif;
 }
 
-.div5{
-    /* background-color: aqua; */
+.dashboard-div1{
     display: inline-block;
     position: absolute;
-    top: 70px;
-    left: 335px;
+    height: 90%;
+    width: 72%;
+    /* background-color: aqua; */
+    top: 100px;
+    left: 340px;
+    padding: 30px 30px;
 }
 
-.div5 ul{
-    list-style: none;
-    
-}
-
-.div5 ul li {
-    /* background-color: blueviolet; */
-    display: inline-block;
-    height: 70px;
-    line-height: 70px;
-    float: left;
-    
-}
-
-.div5 ul li a{
-    text-decoration: none;
-    /* background-color: brown; */
-    display: inline-block;
-    padding: 10px 30px;
-    /* color: white; */
-    background-color: rgb(66, 66, 255);
-    color: white;
-    transition: color 0.6s, background-color 0.6s, border-top 0.1s;
-}
-
-.div5 ul li a:hover{
-    /* background-color: rgb(0, 0, 0);
-    color: rgb(167, 12, 12); */
+.dashboard-card1{
+    height: 320px;
+    width: 300px;
     background-color: white;
-    color: rgb(66, 66, 255);
-    border-top: 5px solid rgb(66, 66, 255);
+    padding: 10px 30px;
+    display: inline-block;
+    margin: 0px 20px;
+    position: absolute;
+    box-shadow: 0px 0px 4px 1px rgb(179, 175, 175);
+}
+
+.dashboard-card1-h2{
+    /* background-color: blueviolet; */
+    text-align: center;
+    font-size: 14px;
+    display: block;
+    padding: 5px 5px;
+    margin: 5px 5px;
+   
+}
+
+.dashboard-card1-btn{
+    /* background-color: cadetblue; */
+    /* padding: 10px 10px; */
+    margin-top: 45px;
+    
+}
+
+.dashboard-card1-btn a{
+    background-color: rgb(150, 151, 150);
+    text-decoration: none;
+    color: black;
+    display: block;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    letter-spacing: 0.7px;
+    transition: color 0.6s,background-color 0.9s ;
+}
+
+.dashboard-card1-btn a:hover{
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
+
+.dashboard-card1-img{
+    height: 70px;
+    width: 100%;
+    /* background-color: rgb(197, 189, 156); */
+    /* background-image: url(./img/material.png); */
+    background-size:contain;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+
+
+.dashboard-card2{
+    height: 320px;
+    width: 300px;
+    background-color: white;
+    padding: 10px 30px;
+    display: inline-block;
+    margin: 0px 20px;
+    position: absolute;
+    left: 400px;
+    box-shadow: 0px 0px 4px 1px rgb(179, 175, 175);
+}
+
+.dashboard-card2-h2{
+    /* background-color: blueviolet; */
+    text-align: center;
+    
+    font-size: 14px;
+    display: block;
+    padding: 5px 5px;
+    margin: 5px 5px;
+   
+}
+
+.dashboard-card2-btn{
+    /* background-color: cadetblue; */
+    /* padding: 10px 10px; */
+    margin-top: 10px;
+    
+}
+
+.dashboard-card2-btn a{
+    background-color: rgb(150, 151, 150);
+    text-decoration: none;
+    display: block;
+    color: black;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    letter-spacing: 0.7px;
+    transition: color 0.6s,background-color 0.9s ;
+}
+
+.dashboard-card2-btn a:hover{
+    color: white;
+    background-color: black;
+}
+
+.dashboard-card2-img{
+    height: 70px;
+    width: 100%;
+    /* background-color: rgb(197, 189, 156); */
+    /* background-image: url(./img/supplier.png); */
+    background-size:contain;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+
+.dashboard-card3{
+    height: 320px;
+    width: 300px;
+    background-color: white;
+    padding: 10px 30px;
+    display: inline-block;
+    margin: 0px 20px;
+    position: absolute;
+    left: 770px;
+    box-shadow: 0px 0px 4px 1px rgb(179, 175, 175);
+}
+
+.dashboard-card4{
+    height: 320px;
+    width: 300px;
+    background-color: white;
+    padding: 10px 30px;
+    display: inline-block;
+    margin: 10px 20px;
+    position: absolute;
+    top: 360px;
+    box-shadow: 0px 0px 4px 1px rgb(179, 175, 175);
+}
+
+.dashboard-card5{
+    height: 320px;
+    width: 300px;
+    background-color: white;
+    padding: 10px 30px;
+    display: inline-block;
+    margin: 10px 20px;
+    position: absolute;
+    top: 360px;
+    left: 400px;
+    box-shadow: 0px 0px 4px 1px rgb(179, 175, 175);
+}
+
+.dashboard-card6{
+    height: 320px;
+    width: 300px;
+    background-color: white;
+    padding: 10px 30px;
+    display: inline-block;
+    margin: 10px 20px;
+    position: absolute;
+    top: 360px;
+    left: 770px;
+    box-shadow: 0px 0px 4px 1px rgb(179, 175, 175);
 }

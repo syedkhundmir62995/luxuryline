@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Poppins:wght@200;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.supplier-container{
+    height: 320px;
+    width: 500px;
+    /* background-color: aqua; */
+    padding: 20px 20px;
+    display: inline-block;
+    position: absolute;
+    margin:150px 50px;
+    box-shadow: 0px 0px 3px 1px rgb(128, 126, 126);
+    border-radius: 10px;
+}
+.supplier-h2{
+    height: 70px;
+    width: 290px;
+    /* background-color: antiquewhite; */
+    padding: 10px;
+    margin:70px 10px;
+    text-transform: uppercase;
+}
+
+.sid-div{
+    height: 50px;
+    width: 380px;
+    /* background-color: rgb(97, 76, 44); */
+    margin: 5px 5px;
+}
+.sid-div label{
+    letter-spacing: 0.7px;
+}
+.sid-div input{
+    height: 30px;
+    padding: 5px 10px;
+    float: right;
+    
+}
+.sid-div input:hover{
+   
+    box-shadow: 0px 0px 3px 1px rgb(3, 3, 3);
+    
+}
+
+.suppliername-div{
+    height: 50px;
+    width: 440px;
+    /* background-color: blanchedalmond; */
+    margin: 15px 5px;
+}
+.suppliername-div label{
+    letter-spacing: 0.7px;
+    /* background-color: antiquewhite; */
+    display: inline-block;
+    width: 150px;
+    margin-top: 10px;
+}
+.suppliername-div input{
+    height: 30px;
+    padding: 5px 10px;
+    float: right;
+    width: 200px;
+    border: 1px solid black;
+    transition: box-shadow 0.5s;
+}
+.suppliername-div input:hover{
+   
+    box-shadow: 0px 0px 2px 1px rgb(126, 125, 125);
+    
+}
+
+.supplieraddress-div{
+    height: 50px;
+    width: 440px;
+    /* background-color: blanchedalmond; */
+    margin: 5px 5px;
+}
+.supplieraddress-div label{
+    letter-spacing: 0.7px;
+    /* letter-spacing: 0.7px; */
+    /* background-color: antiquewhite; */
+    display: inline-block;
+    width: 190px;
+    margin-top: 12px;
+}
+.supplieraddress-div input{
+    height: 30px;
+    padding: 5px 10px;
+    float: right;
+    width: 200px;
+    border: 1px solid black;
+    transition: box-shadow 0.5s;
+}
+.supplieraddress-div input:hover{
+   
+    box-shadow: 0px 0px 2px 1px rgb(126, 125, 125);
+    
+}
+
+.suppliervat-div{
+    height: 50px;
+    width: 440px;
+    /* background-color: blanchedalmond; */
+    margin: 15px 5px;
+}
+.suppliervat-div label{
+    letter-spacing: 0.7px;
+    /* background-color: antiquewhite; */
+    display: inline-block;
+    width: 150px;
+    margin-top: 10px;
+}
+.suppliervat-div input{
+    height: 30px;
+    padding: 5px 10px;
+    float: right;
+    width: 200px;
+    border: 1px solid black;
+    transition: box-shadow 0.5s;
+}
+.suppliervat-div input:hover{
+   
+    box-shadow: 0px 0px 2px 1px rgb(126, 125, 125);
+    
+}
+
+
+.supplier-submit{
+    height: 40px;
+    width: 380px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 7%;
+    letter-spacing: 0.6px;
+    text-transform: capitalize;
+    background-color: rgb(66, 66, 255);
+    color: white;
+    border: none;
+    transition: background-color 0.5s, color 1s, border-radius 1s, border 0.5s;
+}
+
+.supplier-submit:hover{
+    background-color: white;
+    color: rgb(66, 66, 255);
+    border-radius: 40px;
+    border: 1px solid rgb(66, 66, 255);
+}

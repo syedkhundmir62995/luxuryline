@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Poppins:wght@200;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.scale-container{
+    height: 200px;
+    width: 500px;
+    /* background-color: aqua; */
+    padding: 5px 5px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 7%;
+    margin-left: 4%;
+    box-shadow: 0px 0px 3px 1px rgb(128, 126, 126);
+}
+.scale-input{
+    height: 60px;
+    width: 450px;
+    /* background-color: beige; */
+    padding: 10px 5px;
+    line-height: 60px;
+    margin-left: 4%;
+    margin-top: 5%;
+}
+
+.scale-input input{
+    height: 40px;
+    width: 400px;
+    transition: box-shadow 0.5s;
+    border: 1px solid black;
+    padding: 5px 15px;
+}
+
+.scale-input input:hover{
+    box-shadow: 0px 0px 3px 1px rgb(3, 3, 3);
+}
+
+
+.scale-submit{
+    height: 40px;
+    width: 380px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 7%;
+    letter-spacing: 0.6px;
+    text-transform: capitalize;
+    background-color: rgb(66, 66, 255);
+    color: white;
+    border: none;
+    transition: background-color 0.5s, color 1s, border-radius 1s, border 0.5s;
+}
+
+.scale-submit:hover{
+    background-color: white;
+    color: rgb(66, 66, 255);
+    border-radius: 40px;
+    border: 1px solid rgb(66, 66, 255);
+}
+

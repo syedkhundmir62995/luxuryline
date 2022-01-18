@@ -1,0 +1,86 @@
+{% include 'luxuryline/main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Material</title>
+    
+</head>
+<body>
+    <!-- <h2 style="display: inline-block; position: absolute; padding: 5px 5px;">VIEW MATERIAL</h2> -->
+    <h2 style="display: inline-block; position: absolute; padding: 35px 20px; text-transform: uppercase; font-family: Poppins;">VIEW MATERIAL</h2>
+    <div class="viewmaterial-container">
+        
+        <!-- <div class="viewmaterial-card1"><div class="material-logo1">logo</div><span>Card1</span><span>Data</span></div>
+        <div class="viewmaterial-card2"><div class="material-logo2">logo</div><span>Card2</span><span>Data</span></div>
+        <div class="viewmaterial-card3"><div class="material-logo3">logo</div><span>Card3</span><span>Data</span></div> -->
+        <div class="viewmaterial-addmaterialbtn">
+            <input type="search" name="search" id="search" placeholder="Search Here">
+            <div class="viewmaterial-btn"><a href="{% url 'materialpage' %}">Add New Material</a></div>
+            <div class="viewmaterial-btn"><a href="{% url 'scalepage' %}">Add New Scale</a></div>
+            <div class="viewmaterial-btn"><a href="{% url 'supplierpage' %}">Add New Supplier</a></div>
+        </div>
+        <div class="viewmaterial-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>MATERIAL ID</th>
+                        <th>MATERIAL</th>
+                        <th>QUANTITY</th>
+                        <th>SCALE</th>
+                        <th>COLOR</th>
+                        <th>LAST UPDATED DATE</th>
+                        <th>SUPPLIER</th>
+                        <th class="btn-class">ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>101</td>
+                        <td>Leather</td>
+                        <td>12</td>
+                        <td>cm</td>
+                        <td>Black</td>
+                        <td>21-45-2021</td>
+                        <td>Baliq USA</td>
+                        <td ><button>Edit</button><button>Delete</button></td>
+                        
+                    </tr> -->
+                    
+                    {% for obj in material_data %}
+
+                    
+                        <tr>
+                            <td>{{obj.mid}}</td>
+                            <td>{{obj.material}}</td>
+                            <td>{{obj.quantity}}</td>
+                            <td>{{obj.scaleid.scale}}</td>
+                            <td>{{obj.color}}</td>
+                            <td>{{obj.date}}</td>
+                            <td>{{obj.suupplierid.supplier_name}}</td>
+                            <td ><a href="{% url 'editmaterialpage' obj.uid %}" class="edit">Edit</a><a href="{% url 'deletematerialpage' obj.uid %}" class="delete">Delete</a></td>
+                            
+                            
+                        </tr>
+                        
+                    {% endfor %}
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="paginator-text"><span>{{material_data.number}} of {{material_data.paginator.num_pages}}</span></div>
+        {% if material_data.has_previous %}
+        <div class="paginator-previousbtn"><a href="{% url 'viewmaterialpage' %}?page={{material_data.previous_page_number}}">Previous</a></div>
+        {% endif %}
+
+        {% if material_data.has_next %}
+        
+        <div class="paginator-nextbtn"><a href="{% url 'viewmaterialpage' %}?page={{material_data.next_page_number}}">Next</a></div>
+        {% endif %}
+        
+    </div>
+</body>
+</html>

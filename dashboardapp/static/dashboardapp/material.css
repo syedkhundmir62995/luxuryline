@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Poppins:wght@200;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.form-material{
+    display: inline-block;
+    position: absolute;
+    height: 86%;
+    width: 36%;
+    /* border: 1px solid black; */
+    /* margin-left: 25px; */
+    /* margin-top: 10px; */
+    border-radius: 35px;
+    /* background-color: aqua; */
+    box-shadow: 0px 0px 3px 1px rgb(201, 193, 193);
+    /* background-color: blue; */
+    margin-top: 7%;
+    margin-left: 10%;
+    padding-left: 1%;
+    /* margin-bottom: 5%; */
+}
+
+.form-material-delete{
+    display: inline-block;
+    position: absolute;
+    height: 36%;
+    width: 36%;
+    /* border: 1px solid black; */
+    /* margin-left: 25px; */
+    /* margin-top: 10px; */
+    border-radius: 35px;
+    /* background-color: aqua; */
+    box-shadow: 0px 0px 3px 1px rgb(201, 193, 193);
+    /* background-color: blue; */
+    margin-top: 7%;
+    margin-left: 10%;
+    padding-left: 1%;
+    /* margin-bottom: 5%; */
+}
+
+.form-material-edit{
+    display: inline-block;
+    position: absolute;
+    height: 95%;
+    width: 36%;
+    /* border: 1px solid black; */
+    /* margin-left: 25px; */
+    /* margin-top: 10px; */
+    border-radius: 35px;
+    /* background-color: aqua; */
+    box-shadow: 0px 0px 3px 1px rgb(201, 193, 193);
+    /* background-color: blue; */
+    margin-top: 7%;
+    margin-left: 10%;
+    padding-left: 1%;
+    /* margin-bottom: 5%; */
+}
+
+
+.material-container{
+    margin: 10px 10px;
+    padding: 20px 20px;
+    display: inline-block;
+    position: absolute;
+    /* background-color: beige; */
+}
+.material-container h2{
+    padding: 15px 15px;
+    letter-spacing: 0.8px;
+
+}
+
+.Mid-div{
+    height: 65px;
+    width: 500px;
+    /* background-color: bisque; */
+}
+
+.Mid-div label{
+    display: inline-block;
+    /* background-color: blue; */
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+/* .Mid-div input{
+    height: 30px;
+    width: 270px;
+    
+    border-radius: 5px;
+    
+    padding: 5px 15px;
+    transition: background-color 0.6s;
+}
+.Mid-div input:hover{
+    background-color: rgb(240, 235, 235);
+} */
+
+.Mid-div input{
+    height: 30px;
+    width: 270px;
+    /* margin: 10px 10px; */
+    margin-left: 30px;
+    /* margin-top: 10px; */
+    padding: 2px 0px;
+    padding-left: 20px;
+    border-color: rgb(213, 214, 216);
+    /* border-color: white; */
+    border-radius: 5px;
+    transition: box-shadow;
+    
+}
+
+.Mid-div input:hover{
+    box-shadow: 0px 0px 3px 1px rgb(69, 69, 224);
+}
+
+.Material-div{
+    height: 100px;
+    width: 500px;
+    /* background-color: steelblue; */
+
+}
+.Material-div label{
+    /* background-color: tan; */
+    display: inline-block;
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+.Material-div textarea{
+    height: 90%;
+    width: 270px;
+    /* margin: 10px 10px; */
+    /* margin-left: 30px; */
+    /* margin-top: 10px; */
+    padding: 2px 0px;
+    padding-left: 20px;
+    border-color: rgb(213, 214, 216);
+    /* border-color: white; */
+    border-radius: 5px;
+    transition: box-shadow;
+    margin-left: 135px;
+    
+}
+
+.Material-div textarea:hover{
+    box-shadow: 0px 0px 3px 1px rgb(69, 69, 224);
+}
+
+.Quantity-div{
+    height: 65px;
+    width: 500px;
+    /* background-color: bisque; */
+
+}
+.Quantity-div label{
+    /* background-color: tan; */
+    display: inline-block;
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+.Quantity-div input{
+    height: 30px;
+    width: 270px;
+    /* margin: 10px 10px; */
+    /* margin-left: 30px; */
+    margin-top: 7px;
+    padding: 2px 0px;
+    padding-left: 20px;
+    border-color: rgb(213, 214, 216);
+    /* border-color: white; */
+    border-radius: 5px;
+    transition: box-shadow;
+    margin-left: 135px;
+    
+}
+
+.Quantity-div input:hover{
+    box-shadow: 0px 0px 3px 1px rgb(69, 69, 224);
+}
+
+.Scale-div{
+    height: 65px;
+    width: 500px;
+    /* background-color: bisque; */
+
+}
+.Scale-div label{
+    /* background-color: tan; */
+    display: inline-block;
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+.Scale-div select{
+    height: 40px;
+    width: 280px;
+    /* margin: 10px 10px; */
+    /* margin-left: 30px; */
+    margin-top: 7px;
+    padding: 2px 0px;
+    padding-left: 20px;
+    border-color: rgb(213, 214, 216);
+    /* border-color: white; */
+    border-radius: 5px;
+    transition: box-shadow;
+    margin-left: 135px;
+    
+}
+
+.Scale-div select:hover{
+    box-shadow: 0px 0px 3px 1px rgb(69, 69, 224);
+}
+
+
+
+.Supplier-div{
+    height: 65px;
+    width: 500px;
+    /* background-color: bisque; */
+
+}
+.Supplier-div label{
+    /* background-color: tan; */
+    display: inline-block;
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+.Supplier-div select{
+    height: 40px;
+    width: 280px;
+    /* margin: 10px 10px; */
+    /* margin-left: 30px; */
+    margin-top: 7px;
+    padding: 2px 0px;
+    padding-left: 20px;
+    border-color: rgb(213, 214, 216);
+    /* border-color: white; */
+    border-radius: 5px;
+    transition: box-shadow;
+    margin-left: 135px;
+    
+}
+
+.Supplier-div select:hover{
+    box-shadow: 0px 0px 3px 1px rgb(69, 69, 224);
+}
+
+
+
+
+.color-div{
+    height: 65px;
+    width: 500px;
+    /* background-color: bisque; */
+
+}
+.color-div label{
+    /* background-color: tan; */
+    display: inline-block;
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+.color-div input{
+    height: 30px;
+    width: 270px;
+    /* margin: 10px 10px; */
+    /* margin-left: 30px; */
+    margin-top: 7px;
+    padding: 2px 0px;
+    padding-left: 20px;
+    border-color: rgb(213, 214, 216);
+    /* border-color: white; */
+    border-radius: 5px;
+    transition: box-shadow;
+    margin-left: 135px;
+    
+}
+
+.color-div input:hover{
+    box-shadow: 0px 0px 3px 1px rgb(69, 69, 224);
+}
+
+.lastupdated-div{
+    height: 65px;
+    width: 500px;
+    /* background-color: bisque; */
+
+}
+.lastupdated-div label{
+    /* background-color: tan; */
+    display: inline-block;
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+.lastupdated-div input{
+    height: 30px;
+    width: 270px;
+    /* margin: 10px 10px; */
+    /* margin-left: 30px; */
+    margin-top: 7px;
+    padding: 2px 0px;
+    padding-left: 20px;
+    border-color: rgb(213, 214, 216);
+    /* border-color: white; */
+    border-radius: 5px;
+    transition: box-shadow;
+    margin-left: 135px;
+    
+}
+
+.lastupdated-div input:hover{
+    box-shadow: 0px 0px 3px 1px rgb(69, 69, 224);
+}
+
+.Submit-div{
+    height: 40px;
+    width: 380px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 7%;
+    letter-spacing: 0.6px;
+    text-transform: capitalize;
+    background-color: rgb(66, 66, 255);
+    color: white;
+    border: none;
+    transition: background-color 0.5s, color 1s, border-radius 1s, border 0.5s;
+}
+
+.Submit-div:hover{
+    background-color: white;
+    color: rgb(66, 66, 255);
+    border-radius: 40px;
+    border: 1px solid rgb(66, 66, 255);
+}
+
+.add-material-btn{
+    height: 70px;
+    width: 240px;
+    background-color: antiquewhite;
+    line-height: 70px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    left: 70%;
+    top: 20%;
+    
+    
+    
+}
+
+.add-material-btn a{
+    display: block;
+    background-color: rgb(182, 182, 182);
+    color: black;
+    
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    transition: color 0.6s, background-color 0.6s;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+
+}
+.add-material-btn a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}
+
+.redirect-div{
+    display: block;
+    height: 40px;
+    width: 380px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 7%;
+    letter-spacing: 0.6px;
+    text-transform: capitalize;
+    background-color: rgb(66, 66, 255);
+    color: white;
+    border: none;
+    transition: background-color 0.5s, color 1s, border-radius 1s, border 0.5s;
+}
+
+.redirect-div:hover{
+    background-color: white;
+    color: rgb(66, 66, 255);
+    border-radius: 40px;
+    
+    border: 0.5px solid rgb(66, 66, 255);
+    text-decoration: none;
+}
+
+/* 
+.Material-div{
+    height: 180px;
+    width: 500px;
+    background-color: steelblue;
+
+}
+
+.Material-div label{
+    background-color: tan;
+    display: inline-block;
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+.Material-div textarea{
+    background-color: teal;
+    display: inline-block;
+    position: absolute;
+    left: 130px;
+    border-radius: 7px;
+    height: 120px;
+    padding: 15px 15px;
+    transition: background-color 0.6s;
+    border: 2px solid black;
+}
+
+.Material-div textarea:hover{
+    background-color: rgb(240, 235, 235);
+}
+
+.Quantity-div{
+    height: 100px;
+    width: 500px;
+    background-color: bisque;
+}
+
+.Quantity-div label{
+    display: inline-block;
+    background-color: blue;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+.Quantity-div input{
+    height: 30px;
+    width: 270px;
+    
+    border-radius: 5px;
+    
+    padding: 5px 15px;
+    transition: background-color 0.6s;
+}
+.Quantity-div input:hover{
+    background-color: rgb(240, 235, 235);
+}
+
+.Scale-div{
+    height: 100px;
+    width: 500px;
+    background-color: bisque;
+}
+
+.Scale-div label{
+    display: inline-block;
+    background-color: blue;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+.Scale-div select{
+    background-color: rgb(206, 199, 199);
+    height: 50px;
+    width: 150px;
+    text-transform: uppercase;
+}
+
+
+
+.Submit-div{
+    background-color: teal;
+    display: inline-block;
+    height: 40px;
+    width: 170px;
+    margin-left: 150px;
+    margin-top: 10px;
+}
+
+.Submit-div input{
+    height: 100%;
+    width: 100%;
+    color: rgb(30, 34, 34);
+    background-color: rgb(255, 255, 255);
+    transition: color 0.5s, background-color 0.7s;
+}
+
+.Submit-div input:hover{
+    color: white;
+    background-color: rgb(70, 69, 69);
+}
+
+.lastupdated-div{
+    height: 100px;
+    width: 500px;
+    background-color: bisque;
+}
+
+.lastupdated-div label{
+    display: inline-block;
+    background-color: blue;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+.lastupdated-div input{
+    height: 30px;
+    width: 270px;
+    
+    border-radius: 5px;
+    
+    padding: 5px 15px;
+    transition: background-color 0.6s;
+}
+.lastupdated-div input:hover{
+    background-color: rgb(240, 235, 235);
+}
+
+
+
+
+.color-div{
+    height: 100px;
+    width: 500px;
+    background-color: bisque;
+}
+
+.color-div label{
+    display: inline-block;
+    background-color: blue;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+.color-div input{
+    height: 30px;
+    width: 270px;
+    
+    border-radius: 5px;
+    
+    padding: 5px 15px;
+    transition: background-color 0.6s;
+}
+.color-div input:hover{
+    background-color: rgb(240, 235, 235);
+} */
+

@@ -7,7 +7,7 @@
 }
 
 .div1{
-    background-color: rgb(100, 100, 224);
+    background-color:slategrey;
     
     height: 900px;
     width: 320px;
@@ -30,7 +30,7 @@
     height: 50px;
     width: 80px;
     padding: 10px 5px;
-    margin: 15px 10px;
+    margin: 25px 10px;
     color: white;
     border-radius: 100px;
 }
@@ -39,7 +39,7 @@
     /* background-color: blueviolet; */
     display: inline-block;
     position: absolute;
-    margin: 30px -5px;
+    margin: 40px -5px;
     color: white;
     
     
@@ -47,13 +47,14 @@
 }
 .sidebar-h3{
     /* background-color: burlywood; */
-    height: 20px;
-    width: 230px;
+    height: 40px;
+    width: 290px;
     padding: 15px 15px;
     text-align: center;
     margin: 5px 10px;
     color: white;
     letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .sidebar-ul{
@@ -71,10 +72,10 @@
 
 .sidebar-a{
     text-decoration: none;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     display: inline-block;
-    width: 60%;
-    height: 22px;
+    width: 70%;
+    height: 10%;
     padding: 20px 30px;
     margin-left: 10px;
     text-align: left;
@@ -87,7 +88,8 @@
 
 .sidebar-a:hover{
     color: white;
-    background-color: rgb(50, 33, 156);
-    border-radius: 30px;
+    background-color: rgb(61, 60, 73);
+    border-radius: 25px;
+    text-decoration: none;
 }
 

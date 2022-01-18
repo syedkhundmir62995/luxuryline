@@ -8,12 +8,12 @@
     <title>Signup Page</title>
 </head>
 <body>
-
+    
     {% block content %}
-    <h2 style="display: inline-block; position: absolute; padding: 15px 15px;">SIGNUP</h2>
+    <h2 style="display: inline-block; position: absolute; padding: 35px 20px; text-transform: uppercase; font-family: Poppins;">Create New User</h2>
     <div class="signup">
-        <h2 id = 'signup-h2'>Welcome To Luxury Line World</h2><br>
-        <h4 id = 'signup-h4'>Enter your credentials to create your account</h4>
+        <h2 id = 'signup-h2'>Welcome To Luxury Line</h2><br>
+        <h4 id = 'signup-h4'>Enter the credentials for new account</h4>
         <form action="{% url 'signuppage' %}" method="post">
             {% csrf_token %}
             <input type="text" name="uname" id="uname" placeholder="Enter Username" class="signup-input" style="background-image: url('../../static/signupapp/user-icon.png');" required><br>
@@ -25,7 +25,7 @@
             
             
             <input type="submit" value="Create Account" id="submit-btn"><br>
-            <span id="signup-span">Have an account? <a href="{% url 'loginpage' %}">Go to Login Page</a></span><br>
+            <!-- <span id="signup-span">Have an account? <a href="{% url 'loginpage' %}">Go to Login Page</a></span><br> -->
             
         </form>
     </div>
