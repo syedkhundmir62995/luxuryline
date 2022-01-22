@@ -167,7 +167,8 @@ body{
 
 .viewmaterial-table table thead tr{
     height: 80px;
-    background-color: black;
+    /* background-color: black; */
+    background-color: rgb(137, 146, 226);
     /* border-radius: 20px; */
     
 }
@@ -287,7 +288,7 @@ body{
 .viewmaterial-btn a{
     text-decoration: none;
     color: rgb(255, 255, 255);
-    background-color: rgb(17, 211, 224);
+    background-color: rgb(62, 123, 180);
     display: block;
     text-align: center;
     transition: color 0.6s, background-color 0.6s;
@@ -297,7 +298,7 @@ body{
 .viewmaterial-btn a:hover{
     
     color: rgb(255, 255, 255);
-    background-color: rgb(19, 165, 190);
+    background-color: rgb(22, 88, 150);
     text-decoration: none;
     
 }

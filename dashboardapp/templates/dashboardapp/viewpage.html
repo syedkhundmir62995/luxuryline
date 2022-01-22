@@ -34,10 +34,13 @@
             </div>
         {% endfor %}    
         
-        <a class="redirect-div" href="{% url 'viewmaterialpage' %}" style="margin-left: 25%; ">Return to View Material Page</a>        
+        <!-- <a class="redirect-div" href="{% url 'viewmaterialpage' %}" style="margin-left: 25%; ">Return to View Material Page</a>         -->
     </div>
 
-    <div class="paginator-text"><span>{{items.number}} of {{items.paginator.num_pages}}</span></div>
+    <div class="paginator-text">
+        <span>{{items.number}} of {{items.paginator.num_pages}}</span>
+    
+    </div>
         {% if items.has_previous %}
         <div class="paginator-previousbtn"><a href="{% url 'viewpage' query_info.mid query_info.uid %}?page={{items.previous_page_number}}">Previous</a></div>
         {% endif %}
@@ -47,7 +50,7 @@
         <div class="paginator-nextbtn"><a href="{% url 'viewpage' query_info.mid query_info.uid %}?page={{items.next_page_number}}">Next</a></div>
         {% endif %}
 
-    
+    <a class="redirect-div" href="{% url 'viewmaterialpage' %}" style="margin-left: 20%; display: inline-block; ">Return to View Material Page</a>        
 
 
 

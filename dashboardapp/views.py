@@ -19,12 +19,12 @@ def material(request):
         print("Request Data:",request.POST)
         
         if form.is_valid():
-            mid = request.POST['mid']
-            material = request.POST['material']
+            mid = request.POST['mid'].upper()
+            material = request.POST['material'].capitalize()
             quantity = request.POST['quantity']
-            scale = request.POST['scale']
-            supplier = request.POST['supplier']
-            color = request.POST['color']
+            scale = request.POST['scale'].capitalize()
+            supplier = request.POST['supplier'].capitalize()
+            color = request.POST['color'].capitalize()
             lastupdated = request.POST['lastupdated']
             if Material.objects.filter(mid = mid).exists():
                 messages.error(request,"MID Already Exist")
@@ -70,7 +70,8 @@ def material(request):
 
 def scale(request):
     if request.method == 'POST':
-        newscale = request.POST['newscale']
+        newscale = request.POST['newscale'].capitalize()
+        print(newscale)
         if Scale.objects.filter(scale = newscale).exists():
             messages.error(request,"Scale Already Exist")
             return redirect('scalepage')
@@ -88,7 +89,7 @@ def supplier(request):
         form = SupplierForm(request.POST)
         # print(form)
         if form.is_valid():
-            sname = form.cleaned_data['suppliername']
+            sname = form.cleaned_data['suppliername'].capitalize()
             saddress = form.cleaned_data['supplieraddress']
             svat = form.cleaned_data['vat']
             obj = Supplier(supplier_name = sname,supplier_address = saddress,vat = svat)
@@ -145,7 +146,7 @@ def editmaterial(request,id):
 
 
 def viewmaterial(request):
-    material_data = Material.objects.all().select_related('scaleid','suupplierid')
+    material_data = Material.objects.all().select_related('scaleid','suupplierid').order_by('-last_updated')
     # for obj in material_data:
     #     print(obj.mid,' ',obj.scaleid.scale,' ',obj.suupplierid.supplier_name)
     
