@@ -4,8 +4,8 @@ from django import forms
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.http import HttpResponse
-from suppliers.forms import MaterialForm, SupplierForm
-from suppliers.models import Material, Scale, Supplier
+from suppliers.forms import MaterialForm, SupplierForm, EditMaterialForm
+from suppliers.models import Material, Scale, Supplier, MaterialTransaction
 from django.core.paginator import Paginator, EmptyPage
 
 
@@ -33,6 +33,10 @@ def material(request):
                 obj = Material(mid = mid,material = material,quantity = quantity, scaleid_id = scale,color = color,date = lastupdated,suupplierid_id = supplier)
                 print("$$$")           
                 obj.save()
+
+                obj2 = MaterialTransaction(mid = mid, material = material, quantity = quantity, scaleid_id = scale, color = color , suupplierid_id = supplier)
+                print("***")
+                obj2.save()
                 messages.success(request,"New Material Added")
                 return redirect("viewmaterialpage")
         else:
@@ -104,36 +108,40 @@ def supplier(request):
 def editmaterial(request,id):
     query_data = Material.objects.get(uid = id)
     if request.method == 'POST':
-        form = MaterialForm(request.POST)
+        form = EditMaterialForm(request.POST)
         print(request.POST)
         if form.is_valid():
-            edit_material = request.POST['material']
+            # edit_material = request.POST['material']
             edit_quantity = request.POST['quantity']
-            edit_scale = request.POST['scale']
-            edit_color = request.POST['color']
+            # edit_scale = request.POST['scale']
+            # edit_color = request.POST['color']
             edit_lastupdated = request.POST['lastupdated']
-            edit_supplier = request.POST['supplier']
+            # edit_supplier = request.POST['supplier']
 
-            query_data.material = edit_material
+            # query_data.material = edit_material
             query_data.quantity = edit_quantity
-            query_data.scaleid_id = edit_scale
-            query_data.color = edit_color
+            # query_data.scaleid_id = edit_scale
+            # query_data.color = edit_color
             query_data.date = edit_lastupdated
-            query_data.suupplierid_id = edit_supplier
+            # query_data.suupplierid_id = edit_supplier
             query_data.save()
             messages.success(request,"Material Edited")
+
+            query = Material.objects.get(uid = id)
+            #Saving this edited transaction into MaterialTransaction Table
+            obj2 = MaterialTransaction(mid = query.mid, material = query.material, quantity = query.quantity, color = query.color, scaleid_id = query.scaleid_id, suupplierid_id = query.suupplierid_id)
+            obj2.save()
             return redirect('viewmaterialpage')
         
 
         else:
-            messages.error('Error! Try again')
+            messages.error(request,'Error! Try again')
             return redirect('viewmaterialpage')
 
-    form = MaterialForm()
-    scale_data = Scale.objects.all()
-    supplier_data = Supplier.objects.all()
+    form = EditMaterialForm()
     material_data = Material.objects.get(uid = id)
-    return render(request, 'dashboardapp/EditMaterial.html',context={'form':form,'data':scale_data,'supplier_data':supplier_data,'obj':material_data})
+    #Create a table wj=hich stores all transaction wrt mid and you extract top three latest records wrt date
+    return render(request, 'dashboardapp/EditMaterial.html',context={'form':form,'obj':material_data})
 
 
 def viewmaterial(request):
@@ -166,3 +174,25 @@ def deletematerial(request,id):
     else:
 
         return render(request,'dashboardapp/deletematerial.html',{'obj':query_data})
+
+
+
+def view(request,mid,uid):
+    #Accept a uid for each material
+    #Fetch data stored in db 
+    #data should be fetch according to updated time
+    #I suggest you to keep auto_now so that django itself keeps track of updated date time
+    #Make a datetime field, so that even a second difference is taken into account
+    #Fetch only top 3 records from the db
+    query_data = MaterialTransaction.objects.filter(mid = mid).order_by('-date')
+    query_info = Material.objects.get(uid = uid)
+
+    p = Paginator(query_data,5)
+    page_num = request.GET.get('page',1)
+
+    try:
+        page_obj = p.page(page_num)
+    except EmptyPage:
+        page_obj = p.page(1)
+    
+    return render(request,'dashboardapp/viewpage.html',{'items':page_obj,'query_info':query_info})

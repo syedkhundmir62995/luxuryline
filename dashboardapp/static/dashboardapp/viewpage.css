@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Poppins:wght@200;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.viewpage-container{
+    height: 500px;
+    width: 800px;
+    /* background-color: aqua; */
+    position: absolute;
+    display: inline-block;
+    top: 10%;
+    left: 25%;
+    box-shadow: 0px 0px 2px 1px rgb(167, 167, 167);
+}
+
+.viewpage-mid{
+    height: 50px;
+    width: 300px;
+    /* background-color: beige; */
+    line-height: 50px;
+    margin: 10px 5px;
+    display: inline-block;
+}
+
+.viewpage-mid label{
+    /* background-color: blueviolet; */
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+.viewpage-mid span{
+    /* background-color: rgb(94, 66, 121); */
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 20px;
+    background-color: deepskyblue;
+
+}
+
+.viewpage-material{
+    height: 50px;
+    width: 300px;
+    /* background-color: beige; */
+    line-height: 50px;
+    margin: 10px 35px;
+    display: inline-block;
+}
+
+
+.viewpage-material label{
+    /* background-color: blueviolet; */
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+.viewpage-material span{
+    /* background-color: rgb(94, 66, 121); */
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 20px;
+    background-color: deepskyblue;
+}
+
+.viewpage-quantity{
+    height: 50px;
+    width: 300px;
+    /* background-color: beige; */
+    line-height: 50px;
+    display: inline-block;
+    margin:1% 5%;
+}
+.viewpage-quantity label{
+    /* background-color: blueviolet; */
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+.viewpage-quantity span{
+    /* background-color: rgb(94, 66, 121); */
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    border: 1px solid black;
+}
+.viewpage-date{
+    height: 50px;
+    width: 300px;
+    /* background-color: beige; */
+    line-height: 50px;
+    /* margin: 10px 45%; */
+    display: inline-block;
+}
+
+.viewpage-date label{
+    /* background-color: blueviolet; */
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+.viewpage-date span{
+    /* background-color: rgb(94, 66, 121); */
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+    border: 1px solid black;
+}

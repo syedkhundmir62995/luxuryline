@@ -209,6 +209,27 @@ body{
     
 }
 
+.viewmaterial-table table tbody tr td .view{
+    background-color: rgb(22, 135, 228);
+    height: 10px;
+    width: 90px;
+    margin: 2px;
+    text-transform: capitalize;
+    letter-spacing: 0.8px;
+    font-family: 'Poppins';
+    /* background-color: rgb(228, 34, 34); */
+    color: white;
+    transition: color 0.6s, background-color 0.9s;
+    border: none;
+    padding: 5px 15px;
+}
+
+.viewmaterial-table table tbody tr td .view:hover{
+    color: rgb(253, 253, 253);
+    background-color: rgb(15, 99, 155);
+    text-decoration: none;
+}
+
 .viewmaterial-table table tbody tr td .edit{
     background-color: rgb(21, 226, 66);
     height: 10px;

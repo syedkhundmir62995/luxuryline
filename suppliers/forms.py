@@ -18,8 +18,18 @@ class MaterialForm(forms.Form):
     color = forms.CharField(max_length=200,required=True)
     lastupdated = forms.CharField(widget=DateInput)
     
+class EditMaterialForm(forms.Form):
+    mid = forms.CharField(max_length=200, required= True)
+    quantity = forms.IntegerField(max_value=10000,required=True)
+    lastupdated = forms.CharField(widget=DateInput)
 
 class SupplierForm(forms.Form):
     suppliername = forms.CharField(max_length=200,required=True)
     supplieraddress = forms.CharField(max_length=200,required=True)
     vat = forms.CharField(max_length=200,required=False)
+
+# class ViewMaterialForm(forms.Form):
+#     mid = forms.CharField(max_length=200, required=True)
+#     material_name = forms.CharField(max_length=200,required=True)
+#     quantity = forms.IntegerField(max_value=10000,required=True)
+#     date = forms.CharField(widget=DateInput)

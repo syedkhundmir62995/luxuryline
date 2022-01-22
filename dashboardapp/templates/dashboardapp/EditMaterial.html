@@ -29,49 +29,22 @@
 
         <div class="Material-div">
           <label for="id_material">MATERIAL</label>
-          {{form.material}}
+          <span>{{obj.material}}</span>
         </div>
         <div class="Quantity-div">
           <label for="id_quantity">QUANTITY</label>
           {{form.quantity}}
         </div>
-        <div class="Scale-div">
-          <label for="scale">SCALE</label>
+        
 
-          
-          <select id="scale" name = 'scale'>
-            {% for obj in data %}
-            <option value="{{ obj.scaleid }}" >{{ obj.scale }}</option>
-           
-            {% endfor %}
-           
-            
-          </select>
-        </div>
-
-        <div class="color-div">
-          <label for="id_color">COLOR</label>
-          {{form.color}}  
-        </div>
+        
 
         <div class="lastupdated-div">
           <label for="id_lastupdated">DATE</label>
           {{form.lastupdated}}
         </div>
 
-        <div class="Supplier-div">
-          <label for="supplier">SUPPLIER</label>
-
-          
-          <select id="supplier" name = 'supplier'>
-            {% for obj in supplier_data %}
-            <option value="{{ obj.supplierid }}" >{{ obj.supplier_name }}</option>
-           
-            {% endfor %}
-           
-            
-          </select>
-        </div>
+        
 
         <!-- <div class="Submit-div"> -->
           <input type="submit" value="Edit Material" class="Submit-div" />

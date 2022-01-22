@@ -31,7 +31,7 @@
                         <th>QUANTITY</th>
                         <th>SCALE</th>
                         <th>COLOR</th>
-                        <th>LAST UPDATED DATE</th>
+                        <th>DATE</th>
                         <th>SUPPLIER</th>
                         <th class="btn-class">ACTIONS</th>
                     </tr>
@@ -60,7 +60,7 @@
                             <td>{{obj.color}}</td>
                             <td>{{obj.date}}</td>
                             <td>{{obj.suupplierid.supplier_name}}</td>
-                            <td ><a href="{% url 'editmaterialpage' obj.uid %}" class="edit">Edit</a><a href="{% url 'deletematerialpage' obj.uid %}" class="delete">Delete</a></td>
+                            <td ><a href="{% url 'viewpage' obj.mid obj.uid %}" class="view">View</a><a href="{% url 'editmaterialpage' obj.uid %}" class="edit">Edit</a><a href="{% url 'deletematerialpage' obj.uid %}" class="delete">Delete</a></td>
                             
                             
                         </tr>
