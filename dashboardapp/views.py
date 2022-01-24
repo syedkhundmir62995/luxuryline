@@ -34,7 +34,7 @@ def material(request):
                 print("$$$")           
                 obj.save()
 
-                obj2 = MaterialTransaction(mid = mid, material = material, quantity = quantity, scaleid_id = scale, color = color , suupplierid_id = supplier)
+                obj2 = MaterialTransaction(mid = mid, material = material, quantity = quantity, scaleid_id = scale,date = lastupdated, color = color , suupplierid_id = supplier)
                 print("***")
                 obj2.save()
                 messages.success(request,"New Material Added")
@@ -130,7 +130,7 @@ def editmaterial(request,id):
 
             query = Material.objects.get(uid = id)
             #Saving this edited transaction into MaterialTransaction Table
-            obj2 = MaterialTransaction(mid = query.mid, material = query.material, quantity = query.quantity, color = query.color, scaleid_id = query.scaleid_id, suupplierid_id = query.suupplierid_id)
+            obj2 = MaterialTransaction(mid = query.mid, material = query.material, quantity = query.quantity, color = query.color, date = query.date ,scaleid_id = query.scaleid_id, suupplierid_id = query.suupplierid_id)
             obj2.save()
             return redirect('viewmaterialpage')
         
@@ -185,7 +185,7 @@ def view(request,mid,uid):
     #I suggest you to keep auto_now so that django itself keeps track of updated date time
     #Make a datetime field, so that even a second difference is taken into account
     #Fetch only top 3 records from the db
-    query_data = MaterialTransaction.objects.filter(mid = mid).order_by('-date')
+    query_data = MaterialTransaction.objects.filter(mid = mid).order_by('-last_updated')
     query_info = Material.objects.get(uid = uid)
 
     p = Paginator(query_data,5)
@@ -197,3 +197,9 @@ def view(request,mid,uid):
         page_obj = p.page(1)
     
     return render(request,'dashboardapp/viewpage.html',{'items':page_obj,'query_info':query_info})
+
+
+
+
+def salesdashboard(request):
+    return render(request,'dashboardapp/salesdashboard.html')

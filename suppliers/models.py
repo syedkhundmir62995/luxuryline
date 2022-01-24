@@ -43,9 +43,9 @@ class MaterialTransaction(models.Model):
     material = models.TextField(max_length=200,blank=False)
     quantity = models.IntegerField(blank=False)
     color = models.CharField(max_length=200,blank=False,default="None")
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateField()
     scaleid = models.ForeignKey("Scale",on_delete=models.CASCADE)
     suupplierid = models.ForeignKey("Supplier",on_delete=models.CASCADE)
-
+    last_updated = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.material

@@ -9,6 +9,7 @@ urlpatterns = [
     path('EditMaterial/<str:id>',views.editmaterial,name = 'editmaterialpage'),
     path('ViewMaterial',views.viewmaterial,name = 'viewmaterialpage'),
     path('DeleteMaterial/<str:id>',views.deletematerial,name = 'deletematerialpage'),
-    path('View/<str:mid>/<str:uid>',views.view,name = 'viewpage')
+    path('View/<str:mid>/<str:uid>',views.view,name = 'viewpage'),
+    path('SalesDashboard',views.salesdashboard,name = 'salesdashboardpage'),
 
 ]

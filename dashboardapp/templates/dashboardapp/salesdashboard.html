@@ -1,0 +1,61 @@
+{% extends 'luxuryline/main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Dashboard</title>
+</head>
+<body>
+    {% block content %}
+    <div class="sales-container1">
+        <div class="sales-card1">
+            <a href="{% url 'viewmaterialpage' %}">
+                <h2>QUOTATION</h2>
+            </a>
+        </div>
+    </div>
+
+    <div class="sales-container2">
+        <div class="sales-card2">
+            <a href="{% url 'viewmaterialpage' %}">
+                <h2>JOB ORDER</h2>
+            </a>
+        </div>
+    </div>
+
+    <div class="sales-container3">
+        <div class="sales-card3">
+            <a href="{% url 'viewmaterialpage' %}">
+                <h2>INVOICE</h2>
+            </a>
+        </div>
+    </div>
+
+    <div class="sales-container4">
+        <div class="sales-card4">
+            <a href="{% url 'viewmaterialpage' %}">
+                <h2>DELIVERY NOTE</h2>
+            </a>
+        </div>
+    </div>
+
+    <div class="sales-container5">
+        <div class="sales-card5">
+            <a href="{% url 'viewmaterialpage' %}">
+                <h2>ESTIMATION</h2>
+            </a>
+        </div>
+    </div>
+
+    <div class="sales-container6">
+        <div class="sales-card6">
+            <a href="{% url 'viewmaterialpage' %}">
+                <h2>SAMPLE RECORDS</h2>
+            </a>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+</html>
