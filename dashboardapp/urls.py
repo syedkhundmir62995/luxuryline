@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('',views.dashboard, name= 'dashboardpage'),
@@ -11,5 +13,7 @@ urlpatterns = [
     path('DeleteMaterial/<str:id>',views.deletematerial,name = 'deletematerialpage'),
     path('View/<str:mid>/<str:uid>',views.view,name = 'viewpage'),
     path('SalesDashboard',views.salesdashboard,name = 'salesdashboardpage'),
+    path('AddQuotation',views.addquotation,name = 'addquotationpage'),
 
-]
+] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+

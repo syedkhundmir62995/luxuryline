@@ -1,0 +1,65 @@
+{% extends 'luxuryline/main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+        <div class="data" style="display: inline-block; position: absolute; margin-left: 3%;">
+            <h2>Add Quotation</h2>
+            <form method="post" enctype="multipart/form-data" action="{% url 'addquotationpage' %}">
+                {% csrf_token %}
+                <!-- <label for="quotation_number">Quotation Number:</label>
+                <input type="text" name="quotation_number" id="quotation_number" required><br>
+                <label for="item_name">Item:</label>
+                <input type="text" name="item_name" id="item_name" required><br>
+                <label for="size">Size:</label>
+                <input type="text" name="size" id="size" required><br>
+                <label for="unit_price">Unit Price:</label>
+                <input type="number" name="unit_price" id="unit_price" required><br>
+                <label for="goods_description">Goods Description:</label>
+                <textarea name="goods_description" id="goods_description" cols="30" rows="5" required></textarea><br>
+                <label for="quantity">Quantity:</label>
+                <input type="number" name="quantity" id="quantity" required><br>
+                <label for="date">Date:</label>
+                <input type="date" name="date" id="date" required><br>
+                <label for="total_price">Total Price:</label>
+                <input type="number" name="total_price" id="total_price" required><br>
+                <label for="image">Upload Item Photo:</label>
+                <input type="file" name="image" id="image" required><br> -->
+                <label for="id_quotation_number">QUOTATION NUMBER</label>
+                <div class="Scale-div" style="margin-left: -20%;">{{form.quotation_number}}</div>
+                
+                <label for="id_item_name">ITEM NAME</label>
+                <div class="Scale-div" style="margin-left: -20%;">{{form.item_name}}</div>
+
+                <label for="id_size">SIZE</label>
+                <div class="Scale-div" style="margin-left: -20%;">{{form.size}}</div>
+
+                <label for="id_unit_price">UNIT PRICE</label>
+                <div class="Mid-div" style="margin-left: 3%;">{{form.unit_price}}</div>
+
+                <label for="id_goods_description">GOODS DESCRIPTION</label>
+                <div class="Material-div" style="margin-left: -17%;">{{form.goods_description}}</div>
+
+                <label for="id_quantity">QUANTITY</label>
+                <div class="Mid-div" style="margin-left: 3%;">{{form.quantity}}</div>
+                
+                <label for="id_image">ITEM PHOTO</label>
+                <div style="padding: 10px; margin-left: 10%;" >{{form.image}}</div>
+                <!-- <label for="id_quotation_number">Total Price</label>
+                <div class="Mid-div" style="margin-left: 3%;">{{form.total_price}}</div> -->
+                
+                <label for="date">Date:</label>
+                <div class="lastupdated-div" style="margin-left: -17%;"><input type="date" name="date" id="date" required><br></div>
+                    
+                <input type="submit" value="Submit" class="Submit-div" style="margin-left: -3%; width: 400px;">
+            </form>
+        </div>
+    {% endblock content %}
+</body>
+</html>

@@ -3,7 +3,7 @@ from email.policy import default
 from django.db.models import query
 from django.forms import ModelForm, fields
 from django import forms
-from suppliers.models import Scale,Material
+from suppliers.models import Scale,Material, quotation
 
 
 
@@ -33,3 +33,9 @@ class SupplierForm(forms.Form):
 #     material_name = forms.CharField(max_length=200,required=True)
 #     quantity = forms.IntegerField(max_value=10000,required=True)
 #     date = forms.CharField(widget=DateInput)
+
+class addquotationform(forms.ModelForm):
+    class Meta:
+        model = quotation
+        fields = ['quotation_number','item_name','size','unit_price',
+        'goods_description','quantity','image']

@@ -4,8 +4,8 @@ from django import forms
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.http import HttpResponse
-from suppliers.forms import MaterialForm, SupplierForm, EditMaterialForm
-from suppliers.models import Material, Scale, Supplier, MaterialTransaction
+from suppliers.forms import MaterialForm, SupplierForm, EditMaterialForm, addquotationform
+from suppliers.models import Material, Scale, Supplier, MaterialTransaction, quotation
 from django.core.paginator import Paginator, EmptyPage
 
 
@@ -203,3 +203,41 @@ def view(request,mid,uid):
 
 def salesdashboard(request):
     return render(request,'dashboardapp/salesdashboard.html')
+
+def addquotation(request):
+    if request.method == 'POST':
+        # print(request.POST)
+        # print(request.FILES)
+        form = addquotationform(request.POST,request.FILES)
+        if form.is_valid():
+            # form.save()
+            print(form.cleaned_data)
+            print('requestdata',request.POST)
+
+            quotation_number = request.POST['quotation_number']
+            item_name = request.POST['item_name']
+            size = request.POST['size']
+            unit_price = form.cleaned_data['unit_price']
+            goods_description = form.cleaned_data['goods_description']
+            quantity = form.cleaned_data['quantity']
+            total_price = unit_price * quantity
+            image = form.cleaned_data['image']
+            date = request.POST['date']
+
+            obj = quotation(quotation_number_id = quotation_number, item_name_id = item_name,size_id = size,
+            unit_price = unit_price, goods_description = goods_description, quantity = quantity,
+            total_price = total_price, date = date, image = image)
+
+            obj.save()
+
+
+            messages.success(request,'Quotation Added')
+            return redirect('addquotationpage')
+        else:
+            print(form)
+            messages.error(request,'Quotation Not Added')
+            return redirect('addquotationpage')
+    else:
+        form = addquotationform()
+        # print(form)
+        return render(request,'dashboardapp/addquotation.html',{'form':form})

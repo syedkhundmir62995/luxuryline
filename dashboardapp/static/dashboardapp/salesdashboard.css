@@ -43,16 +43,16 @@
     text-align: center;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgb(123, 81, 201);
+    background-color: rgb(161, 112, 56);
    letter-spacing: 0.9px;
    
-   transition: background-color 0.7s, color 0.6s;
+   transition: background-color 0.7s;
 }
 
 .sales-container1 .sales-card1 a h2:hover{
-    color: rgb(194, 194, 194);
     
-    background-color: rgb(80, 12, 145);
+    
+    background-color: rgb(126, 74, 7);
 }
 
 .sales-container2{
@@ -89,14 +89,16 @@
     text-align: center;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgb(123, 81, 201);
+    /* background-color: rgb(123, 81, 201); */
+    background-color: rgb(161, 112, 56);
    letter-spacing: 0.9px;
-   transition: background-color 0.7s, color 0.6s;
+   transition: background-color 0.7s;
 }
 .sales-container2 .sales-card2 a h2:hover{
-    color: rgb(194, 194, 194);
     
-    background-color: rgb(80, 12, 145);
+    
+    /* background-color: rgb(80, 12, 145); */
+    background-color: rgb(126, 74, 7);
 }
 
 .sales-container3{
@@ -133,15 +135,16 @@
     text-align: center;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgb(123, 81, 201);
+    /* background-color: rgb(123, 81, 201); */
+    background-color: rgb(161, 112, 56);
    letter-spacing: 0.9px;
-   transition: background-color 0.7s, color 0.6s;
+   transition: background-color 0.7s;
 }
 
 .sales-container3 .sales-card3 a h2:hover{
-    color: rgb(194, 194, 194);
     
-    background-color: rgb(80, 12, 145);
+    background-color: rgb(126, 74, 7);
+    /* background-color: rgb(80, 12, 145); */
 }
 
 .sales-container4{
@@ -178,15 +181,16 @@
     text-align: center;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgb(123, 81, 201);
+    /* background-color: rgb(123, 81, 201); */
+    background-color: rgb(161, 112, 56);
    letter-spacing: 0.9px;
-   transition: background-color 0.7s, color 0.6s;
+   transition: background-color 0.7s;
 }
 
 .sales-container4 .sales-card4 a h2:hover{
-    color: rgb(194, 194, 194);
+    background-color: rgb(126, 74, 7);
     
-    background-color: rgb(80, 12, 145);
+    /* background-color: rgb(80, 12, 145); */
 }
 
 .sales-container5{
@@ -223,15 +227,15 @@
     text-align: center;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgb(123, 81, 201);
+    /* background-color: rgb(123, 81, 201); */
+    background-color: rgb(161, 112, 56);
    letter-spacing: 0.9px;
-   transition: background-color 0.7s, color 0.6s;
+   transition: background-color 0.7s;
 }
 
 .sales-container5 .sales-card5 a h2:hover{
-    color: rgb(194, 194, 194);
-    
-    background-color: rgb(80, 12, 145);
+    background-color: rgb(126, 74, 7);
+    /* background-color: rgb(80, 12, 145); */
 }
 
 .sales-container6{
@@ -270,13 +274,13 @@
     text-align: center;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgb(123, 81, 201);
+    /* background-color: rgb(123, 81, 201); */
+    background-color: rgb(161, 112, 56);
    letter-spacing: 0.9px;
-   transition: background-color 0.7s, color 0.6s;
+   transition: background-color 0.7s;
 }
 
 .sales-container6 .sales-card6 a h2:hover{
-    color: rgb(194, 194, 194);
-    
-    background-color: rgb(80, 12, 145);
+    background-color: rgb(126, 74, 7);
+    /* background-color: rgb(80, 12, 145); */
 }
