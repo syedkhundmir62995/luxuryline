@@ -22,7 +22,7 @@ class Material(models.Model):
     last_updated = models.DateTimeField(auto_now=True)
     def __str__(self):
         return self.material
-      
+        
 
 class Scale(models.Model):
     scaleid = models.UUIDField(default=uuid.uuid4,unique=True,primary_key=True)
@@ -85,7 +85,7 @@ class quotationNumber(models.Model):
     quotation_number = models.CharField(default="0650",max_length=1000,unique=True)
     clientname = models.CharField(max_length=1000, default='Client Name')
     clientaddress = models.TextField(max_length=1000, default='Client Address')
-
+    lastupdated = models.DateField(auto_now_add=True)
     #One quotation number is for one client(one to one relationship)
     def __str__(self):
         return self.quotation_number

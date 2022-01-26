@@ -1,0 +1,59 @@
+{% extends 'luxuryline/main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% block content %}
+    <div class="viewquotation-header" style="display: inline-block; position: absolute; padding: 10px; margin-left: 10px;">
+    
+        <h2 >View Quotation</h2>
+        <br>
+        <h4>Date:&nbsp;&nbsp;{{query_info.lastupdated}} </h4>
+        <h4>Quotation Number:&nbsp;&nbsp;{{query_info.quotation_number}} </h4>
+        <h4>Client Name: &nbsp; {{query_info.clientname}} </h4>
+        <h4>Client Address: &nbsp; {{query_info.clientaddress}} </h4>
+    </div>
+    
+    
+      <div class="viewquotation-container" style="background-color: gold; width: 1450px; left: 22%; height: 600px; top: 35%;">
+        <table style="width: 1490px; padding: 0%; margin:0%">
+          <thead>
+            <tr>
+              <th style="width: 150px;">Sno</th>
+              <th style="width: 150px;">Image</th>
+              <th style="width: 150px;">Item</th>
+              <th style="width: 150px;">Size</th>
+              <th style="width: 150px;">Goods Description</th>
+              <th style="width: 150px;">Quantity</th>
+              <th style="width: 150px;">Unit Price</th>
+              <th style="width: 150px;">Total Price</th>
+              <th class="btn-class">ACTIONS</th>
+            </tr>
+          </thead>
+
+          <tbody >
+            {% for obj in query %}
+            <tr>
+              <td style="padding: 0%; height: 130px; width: 150px;">{{forloop.counter}}</td>
+              <td style="padding: 0%; height: 130px; width: 150px;"><img src="{{obj.image.url}}" alt="Error to load" style="height: 110px; width: 150px; "></td>
+              <td style="padding: 0%; height: 130px; width: 150px;">{{obj.item_name.item}}</td>
+              <td style="padding: 0%; height: 130px; width: 150px;">{{obj.size.size}}</td>
+              <td style="padding: 0%; height: 130px; width: 150px;">{{obj.goods_description}}</td>
+              <td style="padding: 0%; height: 130px; width: 150px;">{{obj.quantity}}</td>
+              <td style="padding: 0%; height: 130px; width: 150px;">{{obj.unit_price}}</td>
+              <td style="padding: 0%; height: 130px; width: 150px;">{{obj.total_price}}</td>
+              <td style="padding: 0%; height: 130px; width: 250px;"><a href="#" class="view" style="margin: 3px;">View</a><a href="#" class="edit" style="margin: 3px;">Edit</a><a href="#" class="delete" style="margin: 3px;">Delete</a></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    
+    {% endblock content %}
+  </body>
+</html>

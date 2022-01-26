@@ -10,7 +10,9 @@
 <body>
     {% block content %}
         <div class="data" style="display: inline-block; position: absolute; margin-left: 3%;">
-            <h2>Add Quotation</h2>
+            <h2 style="display: inline-block;">Add New Item in Quotation</h2>
+            <div class="return-to-quotationhome" style="display: inline-block; position: absolute; left: 90%; top: 12%; height: 50px;line-height: 50px;text-align: center; width: 300px; background-color: cornflowerblue; border-radius: 5px;"><a href="{% url 'salesdashboardpage' %}" style="display: block; color: ghostwhite;">Return to Dashboard</a></div>
+            <div class="return-to-quotationhome" style="display: inline-block; position: absolute; left: 90%; top: 23%; height: 50px;line-height: 50px;text-align: center; width: 300px; background-color: cornflowerblue; border-radius: 5px;"><a href="{% url 'salesdashboardpage' %}" style="display: block; color: ghostwhite;">Return to Quotation Page</a></div>
             <form method="post" enctype="multipart/form-data" action="{% url 'addquotationpage' %}">
                 {% csrf_token %}
                 <!-- <label for="quotation_number">Quotation Number:</label>

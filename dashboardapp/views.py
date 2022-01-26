@@ -5,7 +5,7 @@ from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.http import HttpResponse
 from suppliers.forms import MaterialForm, SupplierForm, EditMaterialForm, addquotationform
-from suppliers.models import Material, Scale, Supplier, MaterialTransaction, quotation
+from suppliers.models import Material, Scale, Supplier, MaterialTransaction, quotation, quotationNumber
 from django.core.paginator import Paginator, EmptyPage
 
 
@@ -241,3 +241,20 @@ def addquotation(request):
         form = addquotationform()
         # print(form)
         return render(request,'dashboardapp/addquotation.html',{'form':form})
+
+
+
+def viewquotation(request):
+    query = quotationNumber.objects.all()
+    p = Paginator(query,5)
+    page_num = request.GET.get('page',1)
+    page_obj = p.get_page(page_num)
+    return render(request, 'dashboardapp/viewquotation.html',{'query':page_obj})
+
+def viewquotationnumber(request,quotation_number):
+    quotation_number_uuid = quotationNumber.objects.get(quotation_number = quotation_number)
+    print(quotation_number_uuid.uuid)
+
+    query = quotation.objects.filter(quotation_number_id = quotation_number_uuid.uuid)
+    print(query)
+    return render(request, 'dashboardapp/viewquotationnumber.html',{'query':query,'query_info':quotation_number_uuid})

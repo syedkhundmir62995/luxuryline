@@ -1,0 +1,53 @@
+{% extends 'luxuryline/main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <div class="viewmaterial-addmaterialbtn" style="width: 850px; margin-left: 25%; ">
+        <input type="search" name="search" id="search" placeholder="Search Here">
+        <div class="viewmaterial-btn"><a href="{% url 'viewquotationpage' %}" style="width: 164px;">Add New Quotation</a></div>
+    </div>
+    <div class="viewquotation-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Quotation No</th>
+                    <th>Client Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for obj in query %}
+                    <tr>
+                        <td>{{obj.quotation_number}}</td>
+                        <td>{{obj.clientname}}</td>
+                        <td>
+                            <a href="{% url 'viewquotationnumberpage' obj.quotation_number %}" class="view">View</a>
+                            <a href="{% url 'viewquotationpage' %}" class="edit">Edit</a>
+                            <a href="{% url 'viewquotationpage' %}" class="delete">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}        
+               
+            </tbody>
+        </table>
+    </div>
+    <div class="paginator-text"><span>{{query.number}} of {{query.paginator.num_pages}}</span></div>
+        {% if query.has_previous %}
+        <div class="paginator-previousbtn"><a href="{% url 'viewquotationpage' %}?page={{query.previous_page_number}}">Previous</a></div>
+        {% endif %}
+
+        {% if query.has_next %}
+        
+        <div class="paginator-nextbtn"><a href="{% url 'viewquotationpage' %}?page={{query.next_page_number}}">Next</a></div>
+        {% endif %}
+    {% endblock content %}
+</body>
+</html>

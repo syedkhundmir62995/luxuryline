@@ -14,6 +14,8 @@ urlpatterns = [
     path('View/<str:mid>/<str:uid>',views.view,name = 'viewpage'),
     path('SalesDashboard',views.salesdashboard,name = 'salesdashboardpage'),
     path('AddQuotation',views.addquotation,name = 'addquotationpage'),
+    path('ViewQuotation',views.viewquotation,name = 'viewquotationpage'),
+    path('ViewQuotationNumber/<str:quotation_number>',views.viewquotationnumber,name = 'viewquotationnumberpage'),
 
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
