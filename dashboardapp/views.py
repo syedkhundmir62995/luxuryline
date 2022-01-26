@@ -1,10 +1,11 @@
 # from typing_extensions import Required
 
+import re
 from django import forms
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.http import HttpResponse
-from suppliers.forms import MaterialForm, SupplierForm, EditMaterialForm, addquotationform
+from suppliers.forms import MaterialForm, SupplierForm, EditMaterialForm, addquotationform, addquotationnumberform
 from suppliers.models import Material, Scale, Supplier, MaterialTransaction, quotation, quotationNumber
 from django.core.paginator import Paginator, EmptyPage
 
@@ -258,3 +259,28 @@ def viewquotationnumber(request,quotation_number):
     query = quotation.objects.filter(quotation_number_id = quotation_number_uuid.uuid)
     print(query)
     return render(request, 'dashboardapp/viewquotationnumber.html',{'query':query,'query_info':quotation_number_uuid})
+
+
+def addnewquotation(request):
+    if request.method == 'POST':
+        form = addquotationnumberform(request.POST)
+        # print(form.errors)
+        if form.is_valid():
+            q_num = request.POST['quotation_number']
+            q_name = form.cleaned_data['clientname']
+            q_address = form.cleaned_data['clientaddress']
+
+            obj = quotationNumber(quotation_number = q_num, clientname = q_name, clientaddress = q_address)
+            obj.save()
+            # form.save()
+            messages.success(request,'Quotation Added')
+            return redirect('addnewquotationpage')
+        else:
+            messages.error(request,form.errors.as_text())
+            
+            return redirect('addnewquotationpage')
+
+    form = addquotationnumberform()
+    query = quotationNumber.objects.all().order_by('quotation_number').last()
+    query_ans = query.quotation_number+1
+    return render(request,'dashboardapp/addnewquotation.html',{'form':form,'query':query_ans})

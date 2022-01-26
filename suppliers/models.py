@@ -82,13 +82,18 @@ class quotationsize(models.Model):
 
 class quotationNumber(models.Model):
     uuid = models.UUIDField(default=uuid.uuid4, primary_key=True)
-    quotation_number = models.CharField(default="0650",max_length=1000,unique=True)
-    clientname = models.CharField(max_length=1000, default='Client Name')
-    clientaddress = models.TextField(max_length=1000, default='Client Address')
+    # quotation_number = models.CharField(max_length=1000,unique=True)
+    
+    quotation_number = models.IntegerField(unique=True)
+    clientname = models.CharField(max_length=1000 )
+    clientaddress = models.TextField(max_length=1000)
     lastupdated = models.DateField(auto_now_add=True)
     #One quotation number is for one client(one to one relationship)
     def __str__(self):
-        return self.quotation_number
+        return str(self.quotation_number)
+    
+    
+    
 
 class quotation(models.Model):
     uuid = models.UUIDField(default=uuid.uuid4, primary_key=True)

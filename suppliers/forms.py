@@ -3,7 +3,7 @@ from email.policy import default
 from django.db.models import query
 from django.forms import ModelForm, fields
 from django import forms
-from suppliers.models import Scale,Material, quotation
+from suppliers.models import Scale,Material, quotation, quotationNumber
 
 
 
@@ -39,3 +39,9 @@ class addquotationform(forms.ModelForm):
         model = quotation
         fields = ['quotation_number','item_name','size','unit_price',
         'goods_description','quantity','image']
+
+
+class addquotationnumberform(forms.ModelForm):
+    class Meta:
+        model = quotationNumber
+        fields = ['clientname','clientaddress']

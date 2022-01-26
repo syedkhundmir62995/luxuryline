@@ -1,0 +1,43 @@
+{% extends 'luxuryline/main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Quotation</title>
+</head>
+<body>
+    {% block content %}
+    <h2 style="display: inline-block; position: absolute; padding: 35px 20px; text-transform: uppercase; font-family: Poppins;">Add New Quotation</h2>
+
+    <div class="form-material" style="height: 55%;">
+
+        <form method="post" action="{% url 'addnewquotationpage' %}">
+            {% csrf_token %}
+            <div class="material-container">
+
+                <div class="Mid-div">
+                    <label for="quotation_number">Quotation No</label>
+                    <input type="text" name="quotation_number" id="quotation_number" value="{{query}}" >
+                </div>
+
+                <div class="Mid-div">
+                    <label for="id_clientname">Client Name</label>
+                    {{form.clientname}}
+                </div>
+
+                <div class="Material-div">
+                    <label for="id_clientaddress">ClientAddress</label>
+                    {{form.clientaddress}}
+                </div>
+
+                <input type="submit" value="Add Quotation" class="Submit-div" />
+
+            </div>
+        </form>
+    </div>
+
+    {% endblock content %}
+</body>
+</html>
